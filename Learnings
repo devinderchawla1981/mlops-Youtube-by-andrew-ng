@@ -1,0 +1,54 @@
+Youtube video[ Case study: Speech Recognition system
+
+They have used a tool Landing lens to automate MLOps steps.
+
+This year we will see lot of models going into prod ..how to manage life cycle and build frameworks around them??
+1)	In addition to ML Model there are several other components which should be considered while deploying model in to production.
+ 
+
+ 
+
+
+2)	ScopingDataModelingDeployment[Life Cycle]
+Part 1 : Deployment
+3)	Deployment Challenges:
+Concept Drift : Definition of what is Y given X changes 
+Data Drift: Distribution of X changes even if X->Y does not  change
+        4)Common Deployment Patterns:
+        First deployment will be different from maintenance.
+               1)New Product
+2)Automate with manual task
+3)Replace previous ML System
+        
+      Shadow mode deployment --- ML System shadows Human and not used in any real decision.
+      Canary deployment --- Rollout small fraction and monitor system then increase fraction gradually
+      Blue Green Deployment – There is router which can switch traffic to old and new version
+
+     Degree of Automation::: going from Human only to Fully automate systems
+
+     5)Monitoring :
+      i)Dashboard : Brainstorm metrices things that can go wrong. Track those metrices in dashboard.
+      Gradually remove metrices which are not useful.
+      Examples of metrices to track:
+      a)Software metrices: Memory,compute,latency,throughput , server load
+      b)Input metrices:
+Avg input length, 
+Avg input volume, 
+Num missing values
+              Avg image brightness
+c)Output metrices:
+              Times returns Null
+              Times user redoes search
+              Time user switch to typing
+Tools need to be configured with input/output specific metrices.
+
+Set threshold of alarms 
+Adapts metrices over time
+
+How Quickly Data changes:
+Usually slower drift except e.g. covid 19 case
+B2B applications can change fast e.g. company decides to stop making cell phones
+
+Part 2 : Modelling
+ML Model=Code + Data [ we need focus to train model on data now] + Hyperparameters
+
